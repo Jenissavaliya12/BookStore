@@ -1,10 +1,11 @@
 import React from "react";
 import "./App.css";
+import LogInForm from "./component/LogInForm";
 // import About from "./pages/About";
 // import Title from "./component/Title";
 // import  Home from "./pages/Home"
 // import Counter from "./component/Counter"
-import List from "./component/List"
+// import List from "./component/List"
 function App() {
   // const [page, setPage] = React.useState("Home");
 
@@ -15,9 +16,10 @@ function App() {
   //     setPage("Home");
   //   }
   return (
-    <div className="container">
+    <div>
+    <LogInForm/>
     
-    <List/>
+    {/* <Title title="Jenis" description="Web Developer"/> */}
     {/* {page === "Home" ? <Home/> : <About/>}
     <button onClick={handleChange}>Change Page</button> */}
       {/* <Counter /> */}
