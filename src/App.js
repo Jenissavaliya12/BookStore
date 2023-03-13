@@ -1,6 +1,8 @@
 import React from "react";
 import "./App.css";
-import LogInForm from "./component/LogInForm";
+import FocusInputRef from "./component/FocusInputRef";
+// import InputRef from "./component/InputRef";
+// import LogInForm from "./component/LogInForm";
 // import About from "./pages/About";
 // import Title from "./component/Title";
 // import  Home from "./pages/Home"
@@ -17,7 +19,13 @@ function App() {
   //   }
   return (
     <div>
-    <LogInForm/>
+    <FocusInputRef />
+    {/* <InputRef /> */}
+
+    {/* <List /> */}
+
+
+    {/* <LogInForm/> */}
     
     {/* <Title title="Jenis" description="Web Developer"/> */}
     {/* {page === "Home" ? <Home/> : <About/>}
