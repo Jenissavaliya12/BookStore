@@ -1,11 +1,12 @@
 import React from "react";
 import "./App.css";
-import FocusInputRef from "./component/FocusInputRef";
+// import FocusInputRef from "./component/FocusInputRef";
+// import RenderPropsComponent from "./component/RenderPropsComponent";
 // import InputRef from "./component/InputRef";
 // import LogInForm from "./component/LogInForm";
 // import About from "./pages/About";
 // import Title from "./component/Title";
-// import  Home from "./pages/Home"
+import  Home from "./pages/Home"
 // import Counter from "./component/Counter"
 // import List from "./component/List"
 function App() {
@@ -19,7 +20,15 @@ function App() {
   //   }
   return (
     <div>
-    <FocusInputRef />
+
+<Home />
+    {/* <RenderPropsComponent render = {() => {
+      return(
+        <h3>I am coming from Render props</h3>
+      )
+    }}
+    /> */}
+    {/* <FocusInputRef /> */}
     {/* <InputRef /> */}
 
     {/* <List /> */}

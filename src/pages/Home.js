@@ -1,31 +1,45 @@
-import React, { Component } from "react";
-// import Title from '../component/Title'
+import React, { Component } from 'react'
+import HOC from '../component/HOC'
+// import Title from '../components/Title'
+// import Counter from '../components/Counter'
+import UserList from '../component/UserList'
 
 export default class Home extends Component {
-  constructor() {
-    super();
-    this.state = {
-      title: "This is title",
-    };
-  }
-  changeTitle() {
-    this.setState({
-      title: "This was changed title",
-    });
-  }
+
+  // constructor() {
+  //     super();
+  //     this.state = { title: "Default Title", description: "Default Description" };
+  // }
 
   render() {
+    const userData = [
+      {ID : 1, Name : 'Jenis'},
+      {ID : 2, Name : 'Manthan'},
+      {ID : 3, Name : 'Sandip'},
+    
+    ]
+
+    const Users = HOC(UserList, userData)
     return (
-      <div className="container">
-        <p>Hello {this.state.title}</p>
-        <button
-          type="button"
-          onClick={() => this.changeTitle()}
-          class="btn btn-primary"
-        >
-          Subscibe
-        </button>
+      // <div>
+      //    <>
+      //   <h1>This home page</h1>
+      // <div>
+      //   <Title
+      //     Title1="first title"
+      //     Title2="second title"
+      //     Title3="third title"
+      //     titlestate={this.state.title}
+      //     descriptionstate={this.state.description}
+
+      //   />
+      // </div>
+      // <Counter/>
+
+      // 
+      <div className='container mt-5'>
+          <Users />
       </div>
-    );
+    )
   }
 }
