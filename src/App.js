@@ -1,9 +1,10 @@
 import React from "react";
 import "./App.css";
+import CounterHook from "./component/CounterHook";
 // import Consumer3 from "./component/Consumer3";
 // import { UserProvider } from "./component/UserContext";
 // import Users from "./component/Users";
-import Post from "./component/Post";
+// import Post from "./component/Post";
 // import RenderPropsComp from "./component/RenderPropsComp";
 // import FocusInputRef from "./component/FocusInputRef";
 // import RenderPropsComponent from "./component/RenderPropsComponent";
@@ -25,8 +26,8 @@ function App() {
   //   }
   return (
     <div>
-     
-     <Post />
+     <CounterHook />
+     {/* <Post /> */}
      {/* <Users/> */}
      
      
