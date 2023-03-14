@@ -1,14 +1,15 @@
 import React from "react";
 import "./App.css";
 
-import LogInForm from "./component/LogInForm";
+// import LogInForm from "./component/LogInForm";
+import Users from "./component/Users";
 
 function App() {
   
   return (
     <div>
-
-    <LogInForm />
+    <Users />
+    {/* <LogInForm /> */}
    
     </div>
   );
