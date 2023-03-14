@@ -1,6 +1,8 @@
 import React from "react";
 import "./App.css";
-import RenderPropsComp from "./component/RenderPropsComp";
+import Consumer3 from "./component/Consumer3";
+import { UserProvider } from "./component/UserContext";
+// import RenderPropsComp from "./component/RenderPropsComp";
 // import FocusInputRef from "./component/FocusInputRef";
 // import RenderPropsComponent from "./component/RenderPropsComponent";
 // import InputRef from "./component/InputRef";
@@ -21,13 +23,19 @@ function App() {
   //   }
   return (
     <div>
+      <UserProvider value="Jenis">
+        <Consumer3 />
+      </UserProvider>
+
+
+
       {/* <Home /> */}
 
-      <RenderPropsComp
+      {/* <RenderPropsComp
         render={() => {
           return <h3>I am coming from Render props</h3>;
         }}
-      />
+      /> */}
       {/* <FocusInputRef /> */}
       {/* <InputRef /> */}
 
