@@ -1,13 +1,17 @@
-import React, { Component } from 'react'
-import Consumer2 from "./Consumer2"
- class Consumer1 extends Component {
-  render() {
-    return (
-      <div>
-        <Consumer2 />       
-      </div>
-    )
-  }
+import React, { useContext } from "react";
+import { counterContext } from "../App";
+
+function Consumer1() {
+  const counter = useContext(counterContext);
+  return (
+    <div>
+      Consumer1 - {counter.countState}
+      <button onClick={() => counter.countDispatch("increament")}>
+        Increament
+      </button>
+      <button onClick={() => counter.countDispatch("reset")}>Reset</button>
+    </div>
+  );
 }
 
-export default Consumer1
+export default Consumer1;

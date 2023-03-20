@@ -1,31 +1,35 @@
-import React from "react";
+import React, { useReducer } from "react";
 import "./App.css";
-// import HookMouse from "./component/HookMouse";
-// import PostDetail from "./component/PostDetail";
-// import Consumer2 from "./component/Consumer2";
-// import CounterHook from "./component/CounterHook";
-// import LogInForm from "./component/LogInForm";
-// import Users from "./component/Users";
-import Todo from "./component/Todo";
+import Consumer2 from "./component/Consumer2";
+import Consumer1 from "./component/Consumer1";
 
-export const UserContext = React.createContext();
-export const channelContext = React.createContext();
+export const counterContext = React.createContext();
+
+const inititalValue = 0;
+const reducer = (state, action) => {
+  switch (action) {
+    case "increament":
+      return state + 1;
+    case "reset":
+      return inititalValue;
+    default:
+      return state;
+  }
+};
 
 function App() {
+  const [count, dispatch] = useReducer(reducer, inititalValue);
+
   return (
-    <div>
-      <Todo />
-    {/* <CounterHook/> */}
-      {/* <UserContext.Provider value={"Jenis"}>
-        <channelContext.Provider value={"Sankalp"}>
-          <Consumer2 />
-        </channelContext.Provider>
-      </UserContext.Provider> */}
-      {/* <PostDetail /> */}
-      {/* <HookMouse /> */}
-      {/* <Users /> */}
-      {/* <LogInForm /> */}
-    </div>
+    <counterContext.Provider
+      value={{ countState: count, countDispatch: dispatch }}
+    >
+      <div className="text-center">
+        Count - {count}
+        <Consumer1 />
+        <Consumer2 />
+      </div>
+    </counterContext.Provider>
   );
 }
 
