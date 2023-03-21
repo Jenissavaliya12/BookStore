@@ -15,10 +15,11 @@
 
 import React from "react";
 
-export default function UserDetail({ user }) {
+function UserDetail({ user }) {
   return (
     <div>
       {user.id}.{user.name}
     </div>
   );
 }
+export default React.memo(UserDetail);
