@@ -1,13 +1,15 @@
 import React from "react";
 import "./App.css";
-import Users from "./component/Users";
+import RegisterUser from "./component/RegisterUser";
+// import Users from "./component/Users";
 
 
 function App() {
   
 
   return (
-    <Users />
+    <RegisterUser />
+    // <Users />
   );
 }
 
